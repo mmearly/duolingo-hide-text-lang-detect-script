@@ -1,0 +1,17 @@
+{
+    "name": "Duolingo Hide Text",
+    "version": "0.1.0",
+    "description": "Hide target language text on duolingo",
+    "manifest_version": 3,
+    "permissions": [],
+    "host_permissions": ["https://*.duolingo.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.duolingo.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+}
